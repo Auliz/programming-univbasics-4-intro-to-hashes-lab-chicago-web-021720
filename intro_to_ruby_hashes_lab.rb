@@ -23,11 +23,11 @@ def read_from_hash(hash, key)
 end
 
 def update_counting_hash(hash, key)
-  if hash[key]
+  while hash[key] do
     hash[key] += 1
-  else 
-    hash[key] = 1
   end 
+    hash[key] = 1
+  
 end
 
 
